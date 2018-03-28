@@ -6,7 +6,7 @@
 /*   By: stautuaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/24 20:33:19 by stautuaa          #+#    #+#             */
-/*   Updated: 2018/03/25 16:27:36 by alyle            ###   ########.fr       */
+/*   Updated: 2018/03/28 11:21:56 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ int		ft_valid_grid(char **g_sgrid)
 		{
 			if (g_sgrid[i][j] == '-')
 				return (FALSE);
-			if (g_sgrid[i][j] >= '0' && g_sgrid[i][j] <= '9')
+			if (g_sgrid[i][j] >= '1' && g_sgrid[i][j] <= '9')
 			{
 				if (!ft_valid_rows(g_sgrid, i, j))
 					return (FALSE);
