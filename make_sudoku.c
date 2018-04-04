@@ -6,7 +6,7 @@
 /*   By: stautuaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/24 20:46:35 by stautuaa          #+#    #+#             */
-/*   Updated: 2018/03/25 16:21:30 by alyle            ###   ########.fr       */
+/*   Updated: 2018/04/04 11:21:14 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,22 @@ char	**ft_initialize(void)
 	int		i;
 
 	array = malloc(81);
-	i = 0;
-	while (i < 9)
+	if (array)
 	{
-		array[i] = malloc(9);
-		i++;
+		i = 0;
+		while (i < 9)
+		{
+			array[i] = malloc(9);
+			if (array[i])
+				i++;
+			else
+				write(2, "Malloc error\n", 13);
+		}
+		return (array);
 	}
-	return (array);
+	else
+		write(2, "Malloc error\n", 13);
+	return (NULL);
 }
 
 char	**ft_input_line(char *str, char **g_sgrid, int row)
