@@ -7,8 +7,8 @@ Runs using recursive backtracking.
 
 Takes nine lines of nine characters as input.  Valid characters are numbers '1' - '9'and '.' used to represent missing numbers.  Will output the solution As a list of numbers seperated by a single space.  If there is a non-valid entry an "Error" message will be displayed.  Error message will be displayed for inputs having no solution or more than one solution.
 
-To run clone all files into a repository.  Use the Makefile to compile the program using GCC.
-Example 
+To run clone all files into a repository.  Use the Makefile to compile the program using GCC. 
+
 $> `make`
 
 $> `./sudoku "9..8..21." ".5..4...." "..1....7." "41..8..9." "6.2......" ".9......." "...2..4.8" "...41.52." ".....5..1"`
